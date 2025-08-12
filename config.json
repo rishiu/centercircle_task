@@ -1,0 +1,30 @@
+{
+  "task_id": "center_circle",
+  "name": "Centered Circle Drawing",
+  "prompt": "prompt.md",
+  "description": "Draw a circle centered in each input image. You are not given the image dimensions; iteratively refine by inspecting your outputs.",
+  "difficulty": "easy",
+  "category": "image_editing",
+  "input_files": [
+    "image_1.png",
+    "image_2.png",
+    "image_3.png"
+  ],
+  "expected_outputs": {
+    "solution_file": "solution.json",
+    "format": "json",
+    "sample": {
+      "circles": [
+        {"image": "image_1.png", "x": 160, "y": 120, "radius": 50},
+        {"image": "image_2.png", "x": 320, "y": 240, "radius": 60},
+        {"image": "image_3.png", "x": 250, "y": 250, "radius": 40}
+      ]
+    }
+  },
+  "evaluation_criteria": {
+    "center_tolerance_pixels": 3,
+    "center_tolerance_relative": 0.02,
+    "require_all_correct": true
+  },
+  "timeout_seconds": 300
+} 
