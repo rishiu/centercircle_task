@@ -1,8 +1,8 @@
 {
   "task_id": "center_circle",
-  "name": "Centered Circle Drawing",
+  "name": "Target Point Circle Drawing",
   "prompt": "prompt.md",
-  "description": "Draw a circle centered in each input image. You are not given the image dimensions; iteratively refine by inspecting your outputs.",
+  "description": "Draw a circle whose center matches the crosshair intersection shown in each 512x512 input image. You are not given numeric coordinates or image dimensions; iteratively refine by inspecting your outputs.",
   "difficulty": "easy",
   "category": "image_editing",
   "input_files": [
@@ -13,6 +13,7 @@
   "expected_outputs": {
     "solution_file": "solution.json",
     "format": "json",
+    "ground_truth_file": "targets.json",
     "sample": {
       "circles": [
         {"image": "image_1.png", "x": 160, "y": 120, "radius": 50},
